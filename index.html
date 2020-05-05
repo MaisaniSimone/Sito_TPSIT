@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="css/maisani.css">
+    <script type="text/javascript" src="javascript/maisani.js"></script>
+    <meta charset="utf-8">
+    <title>Indovina indovinello</title>
+  </head>
+  <body id="corpo" onload="classifica()">
+    <div id="contenitoretesto">
+      <h1>Completa il puzzle per ottenere il codice segreto</h1>
+    </div>
+    <div id="puzzle">
+      <div id="destra">
+        <img id="foto2" class="foto" src="foto/foto2.jpeg " draggable="true" ondragstart="start(event)">
+        <img id="foto4" class="foto" src="foto/foto4.jpeg"  draggable="true" ondragstart="start(event)">
+        <img id="foto1" class="foto" src="foto/foto1.jpeg"  draggable="true" ondragstart="start(event)">
+        <img id="foto3" class="foto" src="foto/foto3.jpeg"  draggable="true" ondragstart="start(event)">
+        <img id="foto5" class="foto" src="foto/foto5.jpeg"  draggable="true" ondragstart="start(event)">
+      </div>
+      <div id="sinistra">
+        <div class="foto" id="spazio1" ondragover="entra(event)" ondrop="fine1(event)">
+        </div>
+        <div class="foto" id="spazio2" ondragover="entra(event)" ondrop="fine2(event)">
+        </div>
+        <div class="foto" id="spazio3" ondragover="entra(event)" ondrop="fine3(event)">
+        </div>
+        <div class="foto" id="spazio4" ondragover="entra(event)" ondrop="fine4(event)">
+        </div>
+        <div class="foto" id="spazio5" ondragover="entra(event)" ondrop="fine5(event)">
+        </div>
+      </div>
+    </div>
+    <div id="testo">
+      <input type="text"  id="codice" placeholder="Inserisci i numeri partendo da sinistra">
+    </div>
+    <div id="bottone">
+      <input type="button"value="verifica" onclick="verifica()">
+    </div>
+    <div id="ultimo">Ultima persona che ha vinto:</div>
+    <div  id="classifica">
+    </div>
+    <div id="Complimenti"></div>
+  </body>
+</html>
